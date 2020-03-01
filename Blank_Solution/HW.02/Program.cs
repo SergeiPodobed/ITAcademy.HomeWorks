@@ -23,16 +23,16 @@ namespace HW._02
 
             //4. Создание массива бинарных чисел.
 
+            byte[] imageBytes = new byte[arrayOfTextResult.Length - 1];
 
-            byte[] imageBytes = new byte[arrayOfTextResult.Length - 1];       
-                        
-
+            //5. Запускаем цикл
+            
             for (int i = 0; i < arrayOfTextResult.Length - 1; i++)
 
                 
             {
 
-                //5. Конвертирование бинарных кодов в байты фотографии.
+            //6. Конвертирование бинарных кодов в байты фотографии.
 
                 byte binary = Convert.ToByte(arrayOfTextResult[i], 2);
 
@@ -40,11 +40,13 @@ namespace HW._02
 
             }
 
+            //7. Чистка
+
             textReader.Dispose();
 
             
 
-            //7. Вывод байтов фотографии в файл C:\Temp\C#\ДЗ 2\image.png
+            //8. Вывод байтов фотографии в файл C:\Temp\C#\ДЗ 2\image.png
 
             File.WriteAllBytes(@"C:\Temp\C#\HW_2\image.png", imageBytes);
 
