@@ -23,12 +23,13 @@ namespace Task_1._1
 
             }
 
-            Console.WriteLine($"Введите 4 элемента массива mas2 от 0 до 100");
+            Console.WriteLine($"Введите 4 элемента массива mas2 от 0 до 100, подтверждая ввод клавишей Enter");
             {
                 for (int i = 0; i < 4; i++)
 
                     mas2[i] = int.Parse(Console.ReadLine());
             }
+
 
 
             Console.WriteLine($"Поэлементная сумма массивов mas1 и mas2");
