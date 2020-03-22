@@ -27,17 +27,17 @@ namespace Task_6._2
             Console.WriteLine($"Введите место 8-го элемента в массиве mas1 от 0 до 7, подтвердите ввод клавишей Enter");
                      y = byte.Parse(Console.ReadLine());
 
-                for (int i = size - 1; y <=i; i -= 1)
+                for (int i = size - 1; y <=i; i -= 1) // сдвигаем элементы вправо от места вставки
                 {
-                      mas1[i + 1] = mas1[i];
+                      mas1[i + 1] = mas1[i];   
                 }
-                      mas1[y] = x;
+                      mas1[y] = x;                    // вставляем элемент
              
             Console.WriteLine($"Восьмизначный массив после добаления элемента");
 
                 for (int i = 0; i < mas1.Length; i +=1)
             {
-                Console.WriteLine(mas1[i]);
+                Console.WriteLine(mas1[i]);           // печатаем обновленный массив
             }
         }
     }
