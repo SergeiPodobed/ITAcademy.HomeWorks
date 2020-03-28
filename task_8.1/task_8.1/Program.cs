@@ -13,6 +13,7 @@ namespace task_8._1
 
             string text = Console.ReadLine();
             text = text.Replace("o", "a");
+            text = text.Replace("о", "а");
             string[] arr_text = text.Split(new char[] { ';' });
             
                 foreach (string s in arr_text)
