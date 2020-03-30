@@ -16,6 +16,9 @@ namespace hw_8._2
             string text_3 = text;
             string text_4 = text;
             string temp = "temp";
+            string text_5 = text;
+            int a = 0;
+            int b = 0;
 
             string max = String.Empty;
             string min = "000000000000";
@@ -53,7 +56,19 @@ namespace hw_8._2
             Console.WriteLine($"Короткое слово \n{min}");
             Console.WriteLine();
             Console.WriteLine(($"Текст с заменой длинного слова на короткое \n{text_4}"));
-        }
+
+            for (int i = 0; i < text_5.Length; i++)
+            {
+                if ((text_5[i] >= 'а' && text_5[i] <= 'я') || (text_5[i] >= 'А' || text_5[i] <= 'Я'))
+                    a++;
+            }
+            
+           
+            
+            Console.WriteLine();
+            Console.WriteLine($"Количество букв равно {a}");
+
+            }
     }
 }
 
