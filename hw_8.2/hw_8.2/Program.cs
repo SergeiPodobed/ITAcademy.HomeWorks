@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 
 namespace hw_8._2
 {
@@ -9,7 +10,7 @@ namespace hw_8._2
         {
             string text = "Каждый охотник желает знать где сидит фазан?!";
             Console.WriteLine($"Исходный текст \n{ text }");
-            string[] words = text.Split(new char[] { ' ' });
+            string[] words = text.Split(new char[] { ' ' });  
             string[] words2 = text.Split(new char[] { ' ' });
             string[] words3 = text.Split(new char[] { ' ' });
             string text_1 = text;
@@ -21,12 +22,11 @@ namespace hw_8._2
             string text_6 = text;
             int a = 0;
             var b = 0;
-            int d = 0;
-
+            
             string max = String.Empty;
             string min = "000000000000";
 
-            for (int i = 0; i < words.Length; i++)
+            for (int i = 0; i < words.Length; i++) // поиск длинного слова с последующим удалением из текста
             {
                string longword = words[i];
                
@@ -42,7 +42,7 @@ namespace hw_8._2
             Console.WriteLine($"Текст без длинного слова \n{text_1}");
 
             
-            for (int i = 0; i < words2.Length; i++)
+            for (int i = 0; i < words2.Length; i++) // поиск короткого слова с последующей заменой короткого на длинное
             {
                 string shortword = words2[i];
           
@@ -59,36 +59,23 @@ namespace hw_8._2
             Console.WriteLine();
             Console.WriteLine(($"Текст с заменой длинного слова на короткое \n{text_4}"));
 
-            for (int i = 0; i < text_5.Length; i++)
+            for (int i = 0; i < text_5.Length; i++) // вычисление количества букв и знаков препинания
             {
                 if ((text_5[i] >= 'а' && text_5[i] <= 'я') || (text_5[i] >= 'А' || text_5[i] <= 'Я'))
                     a++;
             }
 
             foreach (var c in text_5) if (c == ',' || c == ';' || c == '!' || c == '?') ++b;
-            
-            Console.WriteLine();
-            Console.WriteLine($"Количество букв равно {a}");
-            Console.WriteLine();
-            Console.WriteLine("Кол-во знаков препинания : {0}", b);
 
-            for (int i = 0; i < words3.Length; i++)
-            {
-                string sortword = words3[i];
+                Console.WriteLine();
+                Console.WriteLine($"Количество букв равно {a}");
+                Console.WriteLine();
+                Console.WriteLine("Кол-во знаков препинания : {0}", b);
 
-                if (sortword.Length > max.Length)
-                {
-                    max = sortword;
-                    d++;
-                    words3[i] = words3[d-i-1];
-                }   
+                Console.WriteLine();
+                Console.WriteLine("Текст отсортированный по длине слов");
 
-                foreach(int i in words3)
-                {
-                    Console.WriteLine(words3[i]);
-                }
-            }
-
+            Array.ForEach(words3.OrderByDescending(x => x.Length).ToArray(), x => Console.WriteLine(x)); // сортировка текста от длинного слова к короткому
 
 
         }
