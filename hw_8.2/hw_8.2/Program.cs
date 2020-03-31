@@ -8,7 +8,7 @@ namespace hw_8._2
     {
         static void Main(string[] args)
         {
-            string text = "Каждый охотник желает знать где сидит фазан?!";
+            string text = "Каждый охотник желает знать где сидит фазан ?!";
             Console.WriteLine($"Исходный текст \n{ text }");
             string[] words = text.Split(new char[] { ' ' });  
             string[] words2 = text.Split(new char[] { ' ' });
