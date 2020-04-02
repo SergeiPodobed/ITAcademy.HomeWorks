@@ -7,31 +7,24 @@ namespace task_8._3
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("$ Исходные данные: 1a!2.3!!..4.!.? 6 7!.. ?");
-            StringBuilder text = new StringBuilder("1a!2.3!!..4.!.? 6 7!.. ?");
-            int a = 0;
+            string text = "1a!2.3!!..4.!.? 6 7!.. ?";
+            int i1 = text.IndexOf("?");
+            int i2 = text.IndexOf("!");
+            int i3 = text.IndexOf(".");
 
-            for (int i = 0; i < text.Length; i++)
+            for (int i = 0; i < text.Length - 1; i++)
             {
-                if ((text[i] <= '?'))
-                    
-                    foreach (var b in text)
-                        text_2[] = text[i];
+                while (i < i1)
+                {
+                    string temp1 = text.Remove(i2);
+                    string text_2 = temp1.Remove(i3);
+                }
+                Console.WriteLine(text_2);
             }
-
-
-                 if 
-            {
-
-            }
-
-
-           
-
-
-
 
         }
+               
     }
 }
+  
