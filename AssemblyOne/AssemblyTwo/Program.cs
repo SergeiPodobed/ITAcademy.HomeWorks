@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Schema;
 
-namespace AssemblyOne
+namespace AssemblyTwo
 {
-        public class Motorcycle
+        public class User
     {
         public string name;
-        public double volume;
         public int age;
-
+        public string pasport;
         public void Display()
         {
             Console.WriteLine($"{name}");
         }
-
     }
 }

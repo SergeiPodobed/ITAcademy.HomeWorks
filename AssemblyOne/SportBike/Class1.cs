@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Schema;
 
-namespace AssemblyOne
+namespace SportBike
 {
-        public class Motorcycle
+    public class SportBike : Motorcycle
     {
         public string name;
         public double volume;
@@ -15,6 +12,5 @@ namespace AssemblyOne
         {
             Console.WriteLine($"{name}");
         }
-
     }
 }
