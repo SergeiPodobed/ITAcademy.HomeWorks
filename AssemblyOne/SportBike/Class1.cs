@@ -8,8 +8,18 @@ namespace SportBike
         public double volume;
         public int age;
 
-        public void Display()
-        {
+        defaultStartEngine()
+        { }
+        internalStarrtEngine()
+        { }
+        protectedprivatStartEngine()
+        { }
+        protectedStartEngine()
+        { }
+        publicStartEngine()
+
+
+
             Console.WriteLine($"{name}");
         }
     }
